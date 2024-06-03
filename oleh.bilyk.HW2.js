@@ -79,7 +79,8 @@ let side1 = +prompt("Enter first side");
 let side2 = +prompt("Enter second side");
 let side3 = +prompt("Enter third side");
     
-if (side1 <= 0 || side2 <= 0 || side3 <= 0 || isNaN(side1) || isNaN(side2) || isNaN(side3)) {
+if (side1 <= 0 || side2 <= 0 || side3 <= 0 || isNaN(side1) || isNaN(side2) || isNaN(side3) || side1 ==="" || side2===""|| side3==="")
+{
     console.log("Incorrect data");
 }
     else {
