@@ -46,15 +46,21 @@ function raiseToDegree(a, b) {
     return Math.pow(a, b);
 }
 
-let a = parseInt(prompt("Enter the first number"));
-let b = parseInt(prompt("Enter the second number"));
 
-console.log(raiseToDegree(a,b));
+let numberA = parseInt(prompt("Enter the value for 'a':"));
+let numberB = parseInt(prompt("Enter the value for 'b':"));
+
+if (!Number.isInteger(numberA) || !Number.isInteger(numberB)) {
+    console.log("Please enter integers only.");
+} else {
+    let result = raiseToDegree(numberA, numberB);
+    console.log(`Result: ${result}`);
+}
 */
 
 // Task 5
 /*
-function findMin() {
+function findMin() {.
     let min = arguments[0];
     for (let i = 1; i < arguments.length; i++) {
         if (arguments[i] < min) {
@@ -94,6 +100,22 @@ function lastElement(array, i=1) {
     } else {
         return array.slice(-i);
     }
+}
+
+
+function raiseToDegree(a, b) {
+    return Math.pow(a, b);
+}
+
+// Taking input from the user via prompt
+let numberA = parseInt(prompt("Enter the value for 'a':"));
+let numberB = parseInt(prompt("Enter the value for 'b':"));
+
+if (!Number.isInteger(numberA) || !Number.isInteger(numberB)) {
+    console.log("Please enter integers only.");
+} else {
+    let result = raiseToDegree(numberA, numberB);
+    console.log(`Result: ${result}`);
 }
 
 console.log(lastElement([3, 4, 10, -5]));
